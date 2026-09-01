@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+    --forest-900: #16281F;
+    --forest-800: #1D3327;
+    --forest-700: #24402F;
+    --forest-500: #3A5C46;
+    --brass-600: #9C7530;
+    --brass-500: #B58A3D;
+    --brass-300: #D8B876;
+    --paper-100: #F2F0E4;
+    --paper-050: #F8F6EE;
+    --ink-900: #1C1B17;
+    --ink-600: #4A4A42;
+    --cardinal-600: #8B3A3A;
+    --cardinal-100: #F3E1DD;
+}
+
+body {
+    background: var(--paper-100);
+    color: var(--ink-900);
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .display-serif {
+    font-family: 'Fraunces', serif;
+    letter-spacing: -0.01em;
+}
+
+.font-mono, .catalog-code, .badge {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+a { color: var(--forest-700); }
+a:hover { color: var(--brass-600); }
+
+/* ============ NAVBAR (guest) ============ */
+.navbar-library {
+    background: var(--forest-900) !important;
+    border-bottom: 3px solid var(--brass-500);
+}
+.navbar-library .navbar-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--paper-050) !important;
+    letter-spacing: 0.01em;
+}
+.navbar-library .nav-link {
+    color: rgba(248,246,238,0.78) !important;
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.5rem 0.9rem !important;
+    transition: color 0.15s ease;
+}
+.navbar-library .nav-link:hover { color: var(--brass-300) !important; }
+.navbar-library .nav-link.active { color: var(--brass-300) !important; font-weight: 600; }
+.navbar-library .navbar-toggler {
+    border-color: rgba(248,246,238,0.3);
+}
+.navbar-library .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(248,246,238,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ============ HERO ============ */
+.hero-library {
+    background: radial-gradient(circle at 15% 20%, var(--forest-700), var(--forest-900) 60%);
+    color: var(--paper-050);
+    padding: 5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--brass-500);
+}
+.hero-library::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(216,184,118,0.05) 0 2px, transparent 2px 48px);
+    pointer-events: none;
+}
+.hero-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: var(--brass-300);
+    margin-bottom: 0.75rem;
+}
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+}
+.hero-title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--brass-300);
+}
+.hero-sub {
+    max-width: 34rem;
+    color: rgba(248,246,238,0.82);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+.hero-stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--brass-300);
+    line-height: 1;
+}
+.hero-stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(248,246,238,0.65);
+}
+
+/* ============ BUTTONS ============ */
+.btn-brass {
+    background: var(--brass-500);
+    border: none;
+    color: var(--forest-900);
+    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+.btn-brass:hover { background: var(--brass-300); color: var(--forest-900); transform: translateY(-1px); }
+.btn-outline-cream {
+    border: 1.5px solid rgba(248,246,238,0.5);
+    color: var(--paper-050);
+    background: transparent;
+    font-weight: 500;
+    padding: 0.58rem 1.4rem;
+    border-radius: 2px;
+    transition: all 0.15s ease;
+}
+.btn-outline-cream:hover { border-color: var(--brass-300); color: var(--brass-300); }
+
+.btn-primary {
+    background: var(--forest-700) !important;
+    border-color: var(--forest-700) !important;
+}
+.btn-primary:hover { background: var(--forest-900) !important; border-color: var(--forest-900) !important; }
+.btn-outline-primary {
+    color: var(--forest-700) !important;
+    border-color: var(--forest-700) !important;
+}
+.btn-outline-primary:hover { background: var(--forest-700) !important; color: #fff !important; }
+
+/* ============ CATALOG CARD (buku) ============ */
+.catalog-card {
+    background: var(--paper-050);
+    border: 1px solid rgba(28,27,23,0.12);
+    border-left: 5px solid var(--cat-color, var(--brass-500));
+    border-radius: 3px;
+    position: relative;
+    padding: 1.1rem 1.2rem 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+.catalog-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 5px; right: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, rgba(28,27,23,0.18) 0 6px, transparent 6px 12px);
+}
+.catalog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(22,40,31,0.12);
+}
+.catalog-card .catalog-code {
+    font-size: 0.68rem;
+    color: var(--ink-600);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+}
+.catalog-card h5 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.08rem;
+    margin-bottom: 0.15rem;
+}
+
+/* ============ BADGES (stempel) ============ */
+.badge {
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    padding: 0.35em 0.7em;
+}
+.badge.bg-success { background-color: var(--forest-500) !important; }
+.badge.bg-primary { background-color: var(--forest-700) !important; }
+.badge.bg-danger { background-color: var(--cardinal-600) !important; }
+.badge.bg-secondary { background-color: #8a8577 !important; }
+.badge.bg-warning { background-color: var(--brass-500) !important; color: var(--forest-900) !important; }
+
+/* ============ CARDS (umum) ============ */
+.card {
+    border: 1px solid rgba(28,27,23,0.1);
+    border-radius: 4px;
+}
+
+/* ============ ADMIN SIDEBAR ============ */
+.sidebar-library {
+    background: var(--forest-900) !important;
+    border-right: 3px solid var(--brass-500);
+}
+.sidebar-library h5 {
+    font-family: 'Fraunces', serif;
+    color: var(--paper-050);
+    border-bottom: 1px solid rgba(248,246,238,0.15);
+    padding-bottom: 0.75rem;
+}
+.sidebar-library .nav-link {
+    color: rgba(248,246,238,0.75) !important;
+    font-size: 0.92rem;
+    border-radius: 2px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.sidebar-library .nav-link:hover {
+    background: rgba(181,138,61,0.18);
+    color: var(--brass-300) !important;
+}
+.sidebar-library .nav-link.active {
+    background: var(--brass-500);
+    color: var(--forest-900) !important;
+    font-weight: 600;
+}
+
+/* ============ STAT CARDS (dashboard admin) ============ */
+.stat-ledger {
+    background: var(--paper-050);
+    border: 1px solid rgba(28,27,23,0.1);
+    border-top: 4px solid var(--stat-color, var(--brass-500));
+    border-radius: 3px;
+    padding: 1.1rem 1.2rem;
+}
+.stat-ledger .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--forest-900);
+    line-height: 1;
+}
+.stat-ledger .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-600);
+    margin-top: 0.4rem;
+}
+
+/* ============ FOOTER ============ */
+.footer-library {
+    background: var(--forest-900);
+    color: rgba(248,246,238,0.6);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* ============ SECTION HEADERS ============ */
+.section-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--brass-600);
+    margin-bottom: 0.4rem;
+}
+
+/* ============ LOGIN CARD ============ */
+.login-card {
+    background: var(--paper-050);
+    border: 1px solid rgba(28,27,23,0.1);
+    border-top: 4px solid var(--brass-500);
+    border-radius: 4px;
+}
+
+/* ============ TABLES ============ */
+.table thead {
+    background: var(--forest-900);
+    color: var(--paper-050);
+}
+.table thead th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .catalog-card, .btn-brass, .btn-outline-cream { transition: none; }
+}
+
+/* ============ SUBTLE ENTRANCE ANIMATION ============ */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.catalog-card, .stat-ledger {
+    animation: fadeUp 0.35s ease both;
+}
+
+/* ============ SCROLLBAR (opsional, sedikit polesan) ============ */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--paper-100); }
+::-webkit-scrollbar-thumb { background: var(--forest-500); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brass-500); }
+
+/* ============ EMPTY STATE ============ */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--ink-600);
+}
+.empty-state .empty-icon { font-size: 2.5rem; margin-bottom: 0.5rem; opacity: 0.5; }
