@@ -106,7 +106,7 @@
 <div class="card">
     <div class="card-body">
         <h5>Peminjaman Aktif (Belum Dikembalikan)</h5>
-        <table class="table table-sm table-hover align-middle">
+        <div class="table-responsive"><table class="table table-sm table-hover align-middle">
             <thead>
                 <tr>
                     <th>Mahasiswa</th>
@@ -156,7 +156,7 @@
                     <tr><td colspan="8" class="text-center text-muted">Tidak ada peminjaman aktif.</td></tr>
                 @endforelse
             </tbody>
-        </table>
+        </table></div>
     </div>
 </div>
 @endsection

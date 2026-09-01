@@ -5,7 +5,7 @@
 <h2 class="mb-3">Log Aktivitas</h2>
 <p class="text-muted">Riwayat semua aksi penting yang dilakukan oleh admin/staff di sistem ini.</p>
 
-<table class="table table-hover bg-white">
+<div class="table-responsive"><table class="table table-hover bg-white">
     <thead>
         <tr><th>Waktu</th><th>Dilakukan Oleh</th><th>Aksi</th><th>Keterangan</th></tr>
     </thead>
@@ -21,6 +21,6 @@
         <tr><td colspan="4" class="text-center text-muted">Belum ada aktivitas tercatat.</td></tr>
         @endforelse
     </tbody>
-</table>
+</table></div>
 {{ $logs->links() }}
 @endsection

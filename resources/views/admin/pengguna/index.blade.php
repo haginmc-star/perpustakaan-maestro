@@ -2,12 +2,12 @@
 @section('title', 'Kelola Akun Admin')
 
 @section('content')
-<div class="d-flex justify-content-between mb-3">
+<div class="d-flex justify-content-between mb-3 flex-wrap gap-2">
     <h2>Kelola Akun Admin &amp; Staff</h2>
     <a href="{{ route('admin.pengguna.create') }}" class="btn btn-primary">+ Tambah Akun</a>
 </div>
 
-<table class="table table-hover bg-white">
+<div class="table-responsive"><table class="table table-hover bg-white">
     <thead>
         <tr><th>Nama</th><th>Email</th><th>Role</th><th>Aksi</th></tr>
     </thead>
@@ -36,5 +36,5 @@
         </tr>
         @endforeach
     </tbody>
-</table>
+</table></div>
 @endsection

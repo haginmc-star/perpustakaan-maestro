@@ -21,7 +21,7 @@
 </div>
 
 <h5>Riwayat Peminjaman</h5>
-<table class="table table-hover bg-white">
+<div class="table-responsive"><table class="table table-hover bg-white">
     <thead>
         <tr><th>Mahasiswa</th><th>NIM</th><th>Tgl Pinjam</th><th>Jatuh Tempo</th><th>Tgl Kembali</th><th>Status</th></tr>
     </thead>
@@ -47,6 +47,6 @@
         <tr><td colspan="6" class="text-center text-muted">Buku ini belum pernah dipinjam.</td></tr>
         @endforelse
     </tbody>
-</table>
+</table></div>
 {{ $riwayat->links() }}
 @endsection

@@ -2,7 +2,7 @@
 @section('title', 'Data Mahasiswa')
 
 @section('content')
-<div class="d-flex justify-content-between mb-3">
+<div class="d-flex justify-content-between mb-3 flex-wrap gap-2">
     <h2>Data Mahasiswa</h2>
     <a href="{{ route('admin.mahasiswa.create') }}" class="btn btn-primary">+ Tambah Mahasiswa</a>
 </div>
@@ -21,7 +21,7 @@
     <div class="col-md-2"><button class="btn btn-outline-primary w-100">Cari</button></div>
 </form>
 
-<table class="table table-hover bg-white">
+<div class="table-responsive"><table class="table table-hover bg-white">
     <thead>
         <tr>
             <th>NIM</th><th>Nama</th><th>Jurusan</th><th>Status</th><th>Masa Bekuan</th><th>Aksi</th>
@@ -76,7 +76,7 @@
         <tr><td colspan="6" class="text-center text-muted">Belum ada data.</td></tr>
         @endforelse
     </tbody>
-</table>
+</table></div>
 
 {{ $mahasiswas->links() }}
 

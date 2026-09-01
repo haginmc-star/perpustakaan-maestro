@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <table class="table table-hover bg-white">
+                <div class="table-responsive"><table class="table table-hover bg-white">
                     <thead>
                         <tr><th>Buku</th><th>Tgl Pinjam</th><th>Jatuh Tempo</th><th>Status</th></tr>
                     </thead>
@@ -55,7 +55,7 @@
                         <tr><td colspan="4" class="text-center text-muted">Belum ada riwayat peminjaman.</td></tr>
                         @endforelse
                     </tbody>
-                </table>
+                </table></div>
             @endif
         @endif
     </div>

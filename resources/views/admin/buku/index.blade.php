@@ -2,7 +2,7 @@
 @section('title', 'Data Buku')
 
 @section('content')
-<div class="d-flex justify-content-between mb-3">
+<div class="d-flex justify-content-between mb-3 flex-wrap gap-2">
     <h2>Data Buku</h2>
     <a href="{{ route('admin.buku.create') }}" class="btn btn-primary">+ Tambah Buku</a>
 </div>
@@ -14,7 +14,7 @@
     <div class="col-md-2"><button class="btn btn-outline-primary w-100">Cari</button></div>
 </form>
 
-<table class="table table-hover bg-white">
+<div class="table-responsive"><table class="table table-hover bg-white">
     <thead>
         <tr><th>Cover</th><th>Judul</th><th>Penulis</th><th>Kategori</th><th>Stok Total</th><th>Tersedia</th><th>Aksi</th></tr>
     </thead>
@@ -54,6 +54,6 @@
         <tr><td colspan="7" class="text-center text-muted">Belum ada data.</td></tr>
         @endforelse
     </tbody>
-</table>
+</table></div>
 {{ $bukus->links() }}
 @endsection

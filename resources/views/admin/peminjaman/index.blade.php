@@ -2,7 +2,7 @@
 @section('title', 'Data Peminjaman')
 
 @section('content')
-<div class="d-flex justify-content-between mb-3">
+<div class="d-flex justify-content-between mb-3 flex-wrap gap-2">
     <h2>Data Peminjaman</h2>
     <a href="{{ route('admin.peminjaman.create') }}" class="btn btn-primary">+ Pinjam Buku Baru</a>
 </div>
@@ -22,7 +22,7 @@
     <div class="col-md-2"><button class="btn btn-outline-primary w-100">Cari</button></div>
 </form>
 
-<table class="table table-hover bg-white align-middle">
+<div class="table-responsive"><table class="table table-hover bg-white align-middle">
     <thead>
         <tr>
             <th>Mahasiswa</th><th>NIM</th><th>Buku</th><th>Tgl Pinjam</th>
@@ -72,6 +72,6 @@
         <tr><td colspan="9" class="text-center text-muted">Belum ada data peminjaman.</td></tr>
         @endforelse
     </tbody>
-</table>
+</table></div>
 {{ $peminjamans->links() }}
 @endsection

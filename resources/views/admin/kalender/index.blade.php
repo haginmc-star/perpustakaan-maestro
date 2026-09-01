@@ -2,10 +2,10 @@
 @section('title', 'Kalender Jatuh Tempo')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Kalender Jatuh Tempo</h2>
+<div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+    <h2 class="mb-0">Kalender Jatuh Tempo</h2>
 
-    <form method="GET" class="d-flex gap-2">
+    <form method="GET" class="d-flex gap-2 flex-wrap">
         <select name="bulan" class="form-select">
             @foreach(range(1,12) as $b)
                 <option value="{{ $b }}" @selected($bulan == $b)>{{ \Carbon\Carbon::create()->month($b)->translatedFormat('F') }}</option>
@@ -23,7 +23,8 @@
 
 <div class="card">
     <div class="card-body p-2">
-        <table class="table table-bordered mb-0" style="table-layout: fixed;">
+        <div class="table-responsive">
+        <table class="table table-bordered mb-0" style="table-layout: fixed; min-width: 700px;">
             <thead>
                 <tr class="text-center">
                     <th>Minggu</th><th>Senin</th><th>Selasa</th><th>Rabu</th><th>Kamis</th><th>Jumat</th><th>Sabtu</th>
@@ -58,6 +59,7 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
     </div>
 </div>
 
