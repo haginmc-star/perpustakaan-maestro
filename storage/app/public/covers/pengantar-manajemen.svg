@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320">
+  <rect width="240" height="320" fill="#9C7530"/>
+  <rect x="0" y="0" width="240" height="320" fill="url(#grain)" opacity="0.06"/>
+  <defs>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="none"/>
+      <circle cx="1" cy="1" r="0.6" fill="#ffffff"/>
+    </pattern>
+  </defs>
+  <line x1="18" y1="0" x2="18" y2="320" stroke="#B58A3D" stroke-width="3"/>
+  <rect x="30" y="24" width="34" height="4" fill="#B58A3D"/>
+  <text x="30" y="46" font-family="Georgia, serif" font-size="10" letter-spacing="1.5" fill="#D8B876">MANAJEMEN</text>
+  <text x="30" y="110" font-family="Georgia, serif" font-size="26" font-weight="600" fill="#F8F6EE"><tspan x="30" dy="0">Pengantar</tspan><tspan x="30" dy="42">Manajemen</tspan></text>
+  <line x1="30" y1="240" x2="210" y2="240" stroke="#D8B876" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="30" y="262" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#D8B876">James A. F. Stoner</text>
+  <text x="30" y="300" font-family="Courier New, monospace" font-size="9" letter-spacing="1" fill="#F8F6EE" opacity="0.55">PERPUSTAKAAN UNIVERSITAS</text>
+</svg>
