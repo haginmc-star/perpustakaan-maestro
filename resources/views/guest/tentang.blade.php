@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-@section('title', 'Tentang Perpustakaan')
+@section('title', 'Perpustakaan Maestro')
 
 @section('hero')
 <section class="hero-library">
@@ -43,9 +43,11 @@
         <div class="section-eyebrow">Sejarah Singkat</div>
         <h2 class="mb-3">Dari rak kayu ke katalog digital</h2>
         <p>
-            Tuliskan di sini sejarah perpustakaan kampus kamu: kapan didirikan, perkembangan
-            koleksi, renovasi gedung, digitalisasi katalog, dan pencapaian lainnya. Bagian ini
-            murni konten statis, jadi tinggal disesuaikan dengan teks aslinya.
+        Perpustakaan Universitas Maestro didirikan sejak awal berdirinya kampus ini sebagai pusat penunjang kegiatan akademik. Pada masa awal, perpustakaan hanya berupa ruang baca kecil dengan koleksi buku yang terbatas, digunakan oleh mahasiswa dan dosen untuk kebutuhan perkuliahan.
+
+Seiring bertambahnya jumlah mahasiswa dan program studi, perpustakaan terus berkembang baik dari segi ruang, koleksi, maupun layanan. Sistem pengelolaan yang awalnya manual mulai beralih ke sistem digital untuk memudahkan pencarian dan peminjaman buku.
+
+Kini, Perpustakaan Universitas Maestro telah menjadi pusat sumber belajar modern yang menyediakan koleksi cetak dan digital, ruang diskusi, akses jurnal ilmiah, serta layanan daring bagi seluruh civitas akademika.
         </p>
         <p>
             Perpustakaan ini tumbuh bersama kampus — dari ruang baca kecil menjadi pusat
