@@ -43,7 +43,7 @@
         <div class="section-eyebrow">Sejarah Singkat</div>
         <h2 class="mb-3">Dari rak kayu ke katalog digital</h2>
         <p>
-            TPerpustakaan Universitas Maestro didirikan sejak awal berdirinya kampus ini sebagai pusat penunjang kegiatan akademik. Pada masa awal, perpustakaan hanya berupa ruang baca kecil dengan koleksi buku yang terbatas, digunakan oleh mahasiswa dan dosen untuk kebutuhan perkuliahan.
+            Perpustakaan Universitas Maestro didirikan sejak awal berdirinya kampus ini sebagai pusat penunjang kegiatan akademik. Pada masa awal, perpustakaan hanya berupa ruang baca kecil dengan koleksi buku yang terbatas, digunakan oleh mahasiswa dan dosen untuk kebutuhan perkuliahan.
 
 Seiring bertambahnya jumlah mahasiswa dan program studi, perpustakaan terus berkembang baik dari segi ruang, koleksi, maupun layanan. Sistem pengelolaan yang awalnya manual mulai beralih ke sistem digital untuk memudahkan pencarian dan peminjaman buku.
 
