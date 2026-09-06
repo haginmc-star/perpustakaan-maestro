@@ -6,15 +6,18 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\KalenderController;
 use App\Http\Controllers\Admin\MahasiswaController;
 use App\Http\Controllers\Admin\PeminjamanController;
+use App\Http\Controllers\Admin\PengaturanController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 
-// ================== HALAMAN PUBLIK / GUEST (tanpa login) ==================
-Route::get('/', [GuestController::class, 'tentang'])->name('guest.tentang');
-Route::get('/katalog', [GuestController::class, 'katalog'])->name('guest.katalog');
-Route::get('/katalog/{buku}', [GuestController::class, 'detailBuku'])->name('guest.detail-buku');
-Route::get('/cek-peminjaman', [GuestController::class, 'cekPeminjaman'])->name('guest.cek-peminjaman');
+// ================== HALAMAN PUBLIK / GUEST (tanpa login, dicek maintenance mode) ==================
+Route::middleware('check_maintenance')->group(function () {
+    Route::get('/', [GuestController::class, 'tentang'])->name('guest.tentang');
+    Route::get('/katalog', [GuestController::class, 'katalog'])->name('guest.katalog');
+    Route::get('/katalog/{buku}', [GuestController::class, 'detailBuku'])->name('guest.detail-buku');
+    Route::get('/cek-peminjaman', [GuestController::class, 'cekPeminjaman'])->name('guest.cek-peminjaman');
+});
 
 // ================== LOGIN ADMIN ==================
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
@@ -49,5 +52,7 @@ Route::middleware('is_admin')->prefix('admin')->name('admin.')->group(function (
         Route::post('pengguna', [AdminUserController::class, 'store'])->name('pengguna.store');
         Route::delete('pengguna/{pengguna}', [AdminUserController::class, 'destroy'])->name('pengguna.destroy');
         Route::get('aktivitas', [AdminUserController::class, 'aktivitas'])->name('aktivitas');
+        Route::get('pengaturan', [PengaturanController::class, 'index'])->name('pengaturan.index');
+        Route::post('pengaturan/toggle', [PengaturanController::class, 'toggle'])->name('pengaturan.toggle');
     });
 });

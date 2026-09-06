@@ -40,6 +40,7 @@ ob_start();
         <li class="mt-3 mb-1 px-2 small text-uppercase" style="color: rgba(248,246,238,0.45); letter-spacing:0.06em;">Super Admin</li>
         <li class="nav-item"><a class="nav-link {{ request()->routeIs('admin.pengguna.*') ? 'active' : '' }}" href="{{ route('admin.pengguna.index') }}">Kelola Akun Admin</a></li>
         <li class="nav-item"><a class="nav-link {{ request()->routeIs('admin.aktivitas') ? 'active' : '' }}" href="{{ route('admin.aktivitas') }}">Log Aktivitas</a></li>
+        <li class="nav-item"><a class="nav-link {{ request()->routeIs('admin.pengaturan.*') ? 'active' : '' }}" href="{{ route('admin.pengaturan.index') }}">Pengaturan Situs</a></li>
     @endif
 </ul>
 @php

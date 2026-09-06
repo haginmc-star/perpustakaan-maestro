@@ -15,10 +15,10 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__ . '/../routes/console.php',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustProxies(at: '*');
         $middleware->alias([
             'is_admin' => \App\Http\Middleware\IsAdmin::class,
             'is_super_admin' => \App\Http\Middleware\IsSuperAdmin::class,
+            'check_maintenance' => \App\Http\Middleware\CheckMaintenanceMode::class,
         ]);
     })
     ->withSchedule(function ($schedule) {
