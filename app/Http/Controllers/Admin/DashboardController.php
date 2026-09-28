@@ -25,7 +25,9 @@ class DashboardController extends Controller
 
         $totalBuku = Buku::count();
         $bukuTersedia = Buku::where('stok_tersedia', '>', 0)->count();
-        $sedangDipinjam = Peminjaman::whereIn('status', ['dipinjam', 'terlambat'])->count();
+        $sedangDipinjam = Peminjaman::whereNull('tanggal_kembali')
+    ->whereIn('status', ['dipinjam', 'terlambat'])
+    ->count();
         $mahasiswaDibekukan = Mahasiswa::where('status', 'dibekukan')->count();
 
         $bulan = (int) $request->input('bulan', now()->month);
@@ -34,7 +36,8 @@ class DashboardController extends Controller
         $rekap = $this->hitungRekapBulanan($bulan, $tahun);
 
         $peminjamanAktif = Peminjaman::with(['mahasiswa', 'buku'])
-            ->whereIn('status', ['dipinjam', 'terlambat'])
+    ->whereNull('tanggal_kembali')
+    ->whereIn('status', ['dipinjam', 'terlambat'])
             ->orderBy('tanggal_jatuh_tempo')
             ->get();
 
